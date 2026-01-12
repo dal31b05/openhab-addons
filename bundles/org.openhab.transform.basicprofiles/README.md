@@ -292,6 +292,7 @@ Number:Power PowerUsage {
   channel="mybinding:mything:mychannel" [ profile="basic-profiles:state-filter", conditions=">= 0 kW", "< 20 kW" ]
 }
 ```
+*Note that in this example, the item is a `QuantityType` (in this case Power), so unless the item arriving from the Thing Channel is also a `Quantity Type` (is that even possible?) then the filter will always exclude the update.
 
 Filter out incoming data with very small difference from the previous one:
 
